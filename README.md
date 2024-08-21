@@ -1,6 +1,10 @@
 # Abe - Automatic backup environments
 
-## Install
+<div align="center">
+  <img src="./public/image.png" >
+</div>
+
+## ZSH Install
 
 ```bash
 curl https://raw.githubusercontent.com/andre2l2/abe/master/zsh-install.sh | sh
