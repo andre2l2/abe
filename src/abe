@@ -1,0 +1,42 @@
+#!/bin/bash
+
+directorys=$(ls $1)
+backup_directory_name='env-backup'
+file_name='.env'
+backup_directory_name="$(pwd)/$backup_directory_name"
+directorys_array=()
+
+show_line () {
+  echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
+}
+
+if [ -d ./env-backup ]
+then
+  echo "Directory exsists!"
+else
+  mkdir "$backup_directory_name"
+  echo "Directory created!"
+fi
+
+show_line
+
+for item in $directorys; do
+  directorys_array+=("$(pwd)/$1/$item")
+done
+
+for item in "${directorys_array[@]}"; do
+  base_name="$(basename $item)"
+  cd "$item"
+
+  if [ -f .env ]
+  then
+    cat "$file_name" > "$backup_directory_name/$base_name.env"
+    echo "$base_name.env created!"
+  else 
+    echo "$base_name not found .env!"
+  fi
+
+
+done
+
+echo "Backup ended!"
