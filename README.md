@@ -4,10 +4,18 @@
   <img src="./public/image.png" >
 </div>
 
-## ZSH Install
+## Install
+
+### ZSH
 
 ```bash
 curl https://raw.githubusercontent.com/andre2l2/abe/master/zsh-install.sh | sh
+```
+
+### BASH
+
+```bash
+curl https://raw.githubusercontent.com/andre2l2/abe/master/bash-install.sh | sh
 ```
 
 ## Unistall
