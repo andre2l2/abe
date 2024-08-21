@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 directorys=$(ls $1)
 backup_directory_name='env-backup'
@@ -35,8 +35,6 @@ for item in "${directorys_array[@]}"; do
   else 
     echo "$base_name not found .env!"
   fi
-
-
 done
 
 echo "Backup ended!"
