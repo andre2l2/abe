@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 directorys=$(ls $1)
 backup_directory_name='env-backup'
